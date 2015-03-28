@@ -1,0 +1,15 @@
+<ion-view view-title="Browse">
+  <ion-content>
+  
+
+	<div ng-controller="ListCarsCtrl">			
+	<ul class="list"  ng-repeat="carro in carros">
+  	 	 <li class="item">      	
+      		<a class="item item-avatar" href="#">
+      			<img src={{carro.imagen}}>  <h2>{{carro.conductor}} </h2>      		
+   			 </a>
+    	</li>
+	</ul>
+	</div>
+  </ion-content>
+</ion-view>

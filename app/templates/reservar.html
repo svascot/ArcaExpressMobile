@@ -1,0 +1,57 @@
+<ion-view view-title="Reservar">
+  <ion-content>
+ 
+  <form role="form" >
+    <div class="list">
+ 		 <label class="item item-input item-select">
+   			 <div class="input-label">
+    		  Origen: 
+    		</div>
+    		<select >
+      			<option class="form-control" ng-repeat="destino in destinos">{{destino.nombre}}</option>
+      		</select>
+  		</label>
+  		<label class="item item-input">
+  			<span class="input-label">Fecha partida</span>
+  			<input type="date" ng-model="nuevaReserva.fechaInicioNueva">
+		</label>
+		<label class="item item-input">
+  			<span class="input-label">Hora partida</span>
+  			<select  id="horaP" ng-model="nuevaReserva.horaInicioNueva">
+  			</select>
+		</label>
+  		<label class="item item-input item-select">
+   			 <div class="input-label">
+    		  Destino: 
+    		</div>
+    		<select >
+      			<option ng-repeat="destino in destinos">{{destino.nombre}}</option>
+      		</select>
+  		</label>
+  		<label class="item item-input">
+  			<span class="input-label">Fecha regreso</span>
+  			<input type="date"  ng-model="nuevaReserva.fechaFinNueva">
+		</label>
+		<label class="item item-input">
+  			<span class="input-label">Hora Regreso</span>
+  			<select  id="horaR" ng-model="nuevaReserva.horaFinNueva">
+  		</select>
+		</label>
+		<label class="item item-input">
+ 			 <span class="input-label">Numero de pasajeros</span>
+ 			 <input type="number" ng-model="nuevaReserva.numeroPersonas">
+		</label>
+		<ion-toggle toggle-class="toggle-calm">Solo ida </ion-toggle>
+		<ion-toggle  toggle-class="toggle-calm">Conductor acompañante</ion-toggle>
+    <button class="button button-full button-balanced" ng-click="consultarDisponivilidad()"> 
+        Buscar
+    </button>
+		
+	</div>
+
+</form>
+
+</ion-content>
+
+
+</ion-view>

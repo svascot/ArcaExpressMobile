@@ -1,0 +1,25 @@
+<ion-view view-title="Vehiculos disponibles" name="disponibles">
+  <ion-content>
+    <div class="list card" ng-repeat='vehiculo in vehiculosDisponibles'>
+	<a href="#">
+    <div class="card">
+
+		  <div class="item item-avatar">		   
+		    <h2>{{vehiculo.marca}}</h2>
+		    <p>{{vehiculo.modelo}}</p>
+		  </div>
+
+		  <div class="item item-body" >
+		    <img  src={{vehiculo.imagen}} class="full-image">		 
+		    <p>
+		     {{vehiculo.comentarios}}
+		    </p>
+		    <p>
+		
+		    </p>
+		  </div>
+		  </div>
+		  </a>
+    </div>
+  </ion-content>
+</ion-view>
